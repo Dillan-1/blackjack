@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+; 
+background-image:url("poker-table-background-green-color_47243-1068.avif");
+background-size: cover;
+text-align: center;
+color: white;
+font-weight: bold;
+}
+
+h1{
+    color: goldenrod
+}
+
+#message-el {
+    font-style: italic;
+}
+    </style>
+</head>
+<body>
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p>Cards:</p>
+    <p>Sum:</p>
+    <button id="startAGame" onclick="startGame()">START GAME</button>
+    <script>
+    let firstCard = 10
+let secondCard = 7
+let sum = firstCard + secondCard
+let hasBlackjack = false
+let isAlive = true
+let message = ""
+if(sum <= 20){
+    message = "Do you want to draw a new card?"
+}
+else if(sum === 21){
+    message = "Wohoo! You've got Blackjack!"
+   hasBlackjack = true
+}
+else{
+    message = "You're out of the game!"
+isAlive = false
+}
+console.log(message)
+    </script>
+</body>
+</html>
